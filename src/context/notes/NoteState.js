@@ -18,7 +18,7 @@ const NoteState = (props) => {
                 "name": "Saif",
                 "class": "10b"
             })
-        }, 1000);
+        }, 2000);
     }
     return (
         <NoteContext.Provider value={{ state, update }}>
