@@ -4,25 +4,52 @@ import { useState } from "react";
 const NoteState = (props) => {
     const notesInitial = [
         {
-            "_id": "642e3e74ddab369db1a72be5",
+            "_id": "642e3e74ddab369db1a72be30",
             "user": "642ba76d93184f2df4cd8fe2",
-            "title": "New Note",
+            "title": "New Title",
             "description": "Please access the playlist",
             "tag": "YouTube",
             "date": "2023-04-06T03:37:24.256Z",
             "__v": 0
         },
         {
-            "_id": "643391f34014d505a1b05964",
+            "_id": "643391f34014d505a1b059640",
             "user": "642ba76d93184f2df4cd8fe2",
-            "title": "New Note",
+            "title": "Shaktimaan",
             "description": "Please access the playlist 2",
-            "tag": "YouTube",
+            "tag": "Facebook",
             "date": "2023-04-10T04:34:59.382Z",
             "__v": 0
         },
         {
-            "_id": "642e3e74ddab369db1a72be5",
+            "_id": "642e3e74ddab369db1a72be50",
+            "user": "642ba76d93184f2df4cd8fe2",
+            "title": "Twitter",
+            "description": "Please access the playlist",
+            "tag": "YouTube",
+            "date": "2023-04-06T03:37:24.256Z",
+            "__v": 0
+        },
+        {
+            "_id": "642e3e74ddab369db1a72be80",
+            "user": "642ba76d93184f2df4cd8fe2",
+            "title": "Yahoo",
+            "description": "Please access the playlist",
+            "tag": "YouTube",
+            "date": "2023-04-06T03:37:24.256Z",
+            "__v": 0
+        },
+        {
+            "_id": "642e3e74ddab369db1a72be90",
+            "user": "642ba76d93184f2df4cd8fe2",
+            "title": "Gmail",
+            "description": "Please access the playlist",
+            "tag": "YouTube",
+            "date": "2023-04-06T03:37:24.256Z",
+            "__v": 0
+        },
+        {
+            "_id": "642e3e74ddab369db1a72be22",
             "user": "642ba76d93184f2df4cd8fe2",
             "title": "New Note",
             "description": "Please access the playlist",
@@ -31,34 +58,7 @@ const NoteState = (props) => {
             "__v": 0
         },
         {
-            "_id": "642e3e74ddab369db1a72be5",
-            "user": "642ba76d93184f2df4cd8fe2",
-            "title": "New Note",
-            "description": "Please access the playlist",
-            "tag": "YouTube",
-            "date": "2023-04-06T03:37:24.256Z",
-            "__v": 0
-        },
-        {
-            "_id": "642e3e74ddab369db1a72be5",
-            "user": "642ba76d93184f2df4cd8fe2",
-            "title": "New Note",
-            "description": "Please access the playlist",
-            "tag": "YouTube",
-            "date": "2023-04-06T03:37:24.256Z",
-            "__v": 0
-        },
-        {
-            "_id": "642e3e74ddab369db1a72be5",
-            "user": "642ba76d93184f2df4cd8fe2",
-            "title": "New Note",
-            "description": "Please access the playlist",
-            "tag": "YouTube",
-            "date": "2023-04-06T03:37:24.256Z",
-            "__v": 0
-        },
-        {
-            "_id": "642e3e74ddab369db1a72be5",
+            "_id": "642e3e74ddab369db1a72be70",
             "user": "642ba76d93184f2df4cd8fe2",
             "title": "New Note",
             "description": "Please access the playlist",
