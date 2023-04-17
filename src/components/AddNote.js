@@ -1,11 +1,11 @@
-import React, {useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import noteContext from '../context/notes/noteContext';
 
 const AddNote = () => {
     const context = useContext(noteContext);
     const { addNote } = context;
 
-    const [note, setnote] = useState({title: "", description: "", tag: "default"})
+    const [note, setnote] = useState({ title: "", description: "", tag: "default" })
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ const AddNote = () => {
     }
 
     const onChange = (e) => {
-        setnote({...note, [e.target.name]: e.target.value})
+        setnote({ ...note, [e.target.name]: e.target.value })
     }
     return (
         <div className="container my-3 ms-5">
