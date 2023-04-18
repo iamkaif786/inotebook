@@ -40,7 +40,7 @@ const Login = () => {
                 <label htmlFor="password" className="form-label">Password</label>
                 <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' id="password" />
             </div>
-            <button type="submit"  className="btn btn-primary">Login</button>
+            <button type="submit" className="btn btn-primary">Login</button>
         </form>
     )
 }
