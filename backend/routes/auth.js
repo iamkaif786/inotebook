@@ -16,17 +16,18 @@ router.post('/createuser', [
     body('password', 'Password must be at least 5 Characters').isLength({ min: 5 }) //Pass must be at least 5 Characters.
 
 ], async (req, res) => {
+    let success = false;
     //If there are errors in above post method, return Bad request and the errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ Errors: errors.array() });
+        return res.status(400).json({ success, Errors: errors.array() });
     }
 
     try {
         //Check whether the user with this email exists already
         let user = await User.findOne({ email: req.body.email });
         if (user) {
-            return res.status(400).json({ error: 'Sorry a user with this email is already exists' });
+            return res.status(400).json({ success,  error: 'Sorry a user with this email is already exists' });
         }
         const salt = await bcrypt.genSalt(10);
         const secPass = await bcrypt.hash(req.body.password, salt);
@@ -43,11 +44,12 @@ router.post('/createuser', [
             }
         }
         const authtoken = jwt.sign(data, JWT_SECRET);
-        res.json({ authtoken });
+        success = true;
+        res.json({ success, authtoken });
         // res.json(user);
     } catch (error) {
         console.error(error.message);
-        res.status(500).send("Some error occured");
+        res.status(500).send("Internal Server Error");
     }
 })
 
