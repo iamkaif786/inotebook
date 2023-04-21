@@ -3,7 +3,7 @@ import noteContext from '../context/notes/noteContext';
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 
-const Notes = () => {
+const Notes = (props) => {
     const context = useContext(noteContext);
     // eslint-disable-next-line
     const { notes, getNotes, editNote } = context;
@@ -22,6 +22,7 @@ const Notes = () => {
 
     const handleClick = (e) => {
         editNote(note.id, note.etitle, note.edescription, note.etag)
+        props.showAlert('Updated Successfully', 'success');
     }
 
     const onChange = (e) => {
@@ -29,11 +30,11 @@ const Notes = () => {
     }
     return (
         <>
-            <AddNote />
+            <AddNote showAlert={props.showAlert} />
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </button>
-            
+
             {/* Updating Modal Code Starts Here */}
 
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -72,7 +73,7 @@ const Notes = () => {
                     {notes.length === 0 && ' No Notes to display'}
                 </div>
                 {notes.map((note) => {
-                    return <Noteitem key={note._id} updateNote={updateNote} note={note} />
+                    return <Noteitem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
                 })}
             </div>
         </>
